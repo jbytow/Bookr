@@ -44,7 +44,7 @@ class BookContributor(models.Model):
 
 class Review(models.Model):
     content = models.CharField(help_text="text of the review", max_length=99999999999)
-    rating = models.IntegerField(help_text="user's rating"),
+    rating = models.IntegerField(help_text="user's rating", default=0)
     date_created = models.DateTimeField(auto_now_add=True, help_text="creation date")
     date_edited = models.DateTimeField(auto_now_add=True, help_text="edition date")
     creator = models.ForeignKey(auth.get_user_model(), on_delete=models.CASCADE)
