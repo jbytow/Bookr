@@ -8,9 +8,14 @@ def index(request):
     return render(request, "reviews/base.html")
 
 
+def book_search(request):
+    search_text = request.GET.get("search", "")
+    return render(request, "reviews/search-results.html", {"search_text": search_text})
+
+
 def book_list(request):
     books = Book.objects.all()
-    book_list = []
+    books_with_reviews = []
     for book in books:
         reviews = book.review_set.all()
         if reviews:
@@ -19,14 +24,12 @@ def book_list(request):
         else:
             book_rating = None
             number_of_reviews = 0
-        book_list.append({'book': book,
-                          'book_rating': book_rating,
-                          'number_of_reviews': number_of_reviews})
+        books_with_reviews.append({"book": book, "book_rating": book_rating, "number_of_reviews": number_of_reviews})
 
     context = {
-        'book_list': book_list
+        "book_list": books_with_reviews
     }
-    return render(request, 'reviews/books_list.html', context)
+    return render(request, "reviews/book_list.html", context)
 
 
 def book_detail(request, pk):
