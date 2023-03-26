@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 
 from bookr.views import profile
 
+
 urlpatterns = [
     path('accounts/', include(('django.contrib.auth.urls', 'auth'), namespace='accounts')),
     path('accounts/profile/', profile, name='profile'),
