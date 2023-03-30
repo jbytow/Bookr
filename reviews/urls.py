@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .import views
+from .import views, api_views
 
 urlpatterns = [
     path('', views.index),
@@ -12,5 +12,7 @@ urlpatterns = [
     path('book-search/', views.book_search, name='book_search'),
     path('publishers/<int:pk>/', views.publisher_edit, name='publisher_edit'),
     path('publishers/new/', views.publisher_edit, name='publisher_create'),
+    path('api/all_books/', api_views.AllBooks.as_view(), name='all_books'),
+    path('api/contributors/', api_views.ContributorView.as_view(), name='contributors')
 ]
 
