@@ -24,6 +24,7 @@ import reviews.views
 urlpatterns = [
     path('accounts/', include(('django.contrib.auth.urls', 'auth'), namespace='accounts')),
     path('accounts/profile/', bookr.views.profile, name='profile'),
+    path('accounts/profile/reading_history', bookr.views.reading_history, name='reading_history'),
     path('admin/', admin.site.urls),
     path('', reviews.views.index),
     path('book-search/', reviews.views.book_search, name='book_search'),
