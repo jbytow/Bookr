@@ -43,6 +43,7 @@ class Dev(Configuration):
         'rest_framework.authtoken',
         'debug_toolbar',
         'crispy_forms',
+        'crispy_bootstrap4',
         'reviews'
     ]
 

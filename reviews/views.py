@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.core.files.images import ImageFile
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from django.contrib.auth.decorators import user_passes_test, permission_required, login_required
+from django.contrib.auth.decorators import user_passes_test, login_required
 from django.core.exceptions import PermissionDenied
 
 from .forms import PublisherForm, SearchForm, ReviewForm, BookMediaForm
@@ -194,7 +194,3 @@ def book_media(request, pk):
 
     return render(request, "reviews/instance-form.html",
                   {"instance": book, "form": form, "model_type": "Book", "is_file_upload": True})
-
-
-def react_example(request):
-    return render(request, "react-example.html")
