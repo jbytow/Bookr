@@ -4,16 +4,16 @@ Bookr is a web application developed as a part of the "Web Development with Djan
 
 **Features**
 
-    Display Books: Browse through a wide range of books and view their details
+*Display Books: Browse through a wide range of books and view their details
 
-    Search for Books: Search for books based on title/author
+*Search for Books: Search for books based on title/author
 
-    Reviews: Write, edit and view latest book reviews.
+*Reviews: Write, edit and view latest book reviews.
 
-    Publishers: Display and edit publishers
+*Publishers: Display and edit publishers
 
-    REST Api: Added to the app
+*REST Api: Added to the app
     
-    User Accounts: Register, login and tracks your book read on your profile and download reading history in excel file
+*User Accounts: Register, login and tracks your book read on your profile and download reading history in excel file
 
     
